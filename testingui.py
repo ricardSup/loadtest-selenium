@@ -19,10 +19,10 @@ options.add_argument('--disable-software-rasterizer')
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 
-username = "user1"
-password = "password"
+username = "#"
+password = "#"
 
-url = "http://los.confins.one/"
+url = "http://#/"
 
 def OpenClickSearch():
     driver = webdriver.Chrome(executable_path=PATH,options=options)
@@ -73,7 +73,7 @@ def OpenClickSearch():
       try:
          thingstodo = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "/html/body/app-root/app-full-layout/div/div[2]/div/div/div/app-dash-board/div[1]/div[1]/lib-ucthingstodo/div/div/div/h4")))
       except:
-         if driver.current_url == 'http://los.confins.one/Pages/Login':    
+         if driver.current_url == 'http://#/Pages/Login':    
             rolepick=WebDriverWait(driver,15).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div[2]/div[2]/div/mat-dialog-container/app-rolepick/div/table/tbody/tr[5]/td[4]/a')))
             ActionChains(driver).move_to_element(rolepick).click(rolepick).perform()
             continue
